@@ -1,0 +1,8 @@
+File类操作，File主要操作Path对象
+字节Io流  inputStream(通过read方法) outputStream（通过write方法）
+字符io流  Reader  Writer
+对象系列化 Serializable
+
+
+jdbc 连接数据库  4个步骤
+
