@@ -23,5 +23,11 @@ public class HelloB extends HelloA {
 
     public static void main(String[] args) {
          new HelloB();
+//        static A
+//        static B
+//        I'm A class
+//        HelloA
+//        I'm B class
+//        HelloB
     }
 }

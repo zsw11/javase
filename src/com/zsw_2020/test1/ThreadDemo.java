@@ -2,6 +2,8 @@ package com.zsw_2020.test1;
 
 import java.util.Arrays;
 
+
+
 public class ThreadDemo extends Thread {
     public ThreadDemo(String name) {
         super(name);
@@ -31,7 +33,7 @@ public class ThreadDemo extends Thread {
         System.out.println(thread.getName()+";"+thread);
         thread.setName("我是主线程");
         System.out.println(thread.getName()+":"+thread);
-//        System.gc();
+//        System.gc();  建议jvm进行垃圾回收，什么时候回收不知道
         int[] a = {2,3,4,5,6,6};
         System.out.println(Arrays.toString(reverse(a)));
         String s = new String("java");
