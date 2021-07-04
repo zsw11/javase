@@ -2,6 +2,9 @@ package com.zsw_2020.ztyj01;
 
 public class Test {
     public static void main(String[] args) {
+        AbstractT abstractT = new AbstractT();
+        abstractT.b();
+        abstractT.a();
         Point point = new Point();
         Car baoMa = new Car();
         Person person = new Person();
