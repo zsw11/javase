@@ -23,6 +23,22 @@ public class lamdba01 {
         arrayList.add(new Product(5,"手机5","zongse",39.00));
     }
 
+//    public static void main(String[] args) {
+//        String a = null;
+//        String a1=null;
+//        String a2= "";
+//        System.out.println(a+"-"+a1+"-"+a2);
+//        ArrayList<Object> objects = new ArrayList<>();
+//        System.out.println(objects);
+//        objects =null;
+//        System.out.println(objects);
+//        arrayList.forEach(i->{   // java.util.ConcurrentModificationException, 并发修改异常
+//            if (i.getId() > 2) {
+//                arrayList.remove(i);
+//            }
+//            });
+//    }
+
     public void lamdbatest01(){
         Comparator<Integer> comparator = new Comparator<Integer>() {
             @Override

@@ -14,6 +14,11 @@ public class HashMapDemo {
     public static void main(String[] args) {
         //map的3种对象的迭代
         Map<String,String> s = new HashMap<>();
+        s.put("1", "1");
+        s.put("2", "1");
+        s.put("3", "1");
+        s.put("4", "1");
+        System.out.println(s.keySet());
         for(String key:s.keySet()){
             System.out.println(key);
         }
