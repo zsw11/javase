@@ -10,7 +10,7 @@ public class StudentVo {
     private String name;
     private Integer age;
     private String sex;
-    private Integer id;
+    private String id;
     // vo特有的
     private teacher num;
 
@@ -46,11 +46,11 @@ public class StudentVo {
         this.sex = sex;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

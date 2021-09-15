@@ -15,7 +15,7 @@ public class demo01 {
     }
     public static void beanTest() throws BeansException {
         Student student = new Student();
-        student.setId(1);
+        student.setId(1); // 字段类型不一样，也无法copy
         student.setAge(24);
         student.setName("zsw");
         student.setSex("nan");
@@ -23,7 +23,7 @@ public class demo01 {
 
         StudentVo studentVo = new StudentVo();
         BeanUtils.copyProperties(student, studentVo);
-        studentVo.setNum(new teacher("我是老师"));
+//        studentVo.setNum(new teacher("我是老师"));
 //        studentVo.setName("ztyj");
 //        student.setName("ztyj");
         System.out.println(student.toString()+"--------"+studentVo.toString());
