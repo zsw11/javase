@@ -13,7 +13,7 @@ public class TestMain {
     public static void main(String[] args) {
         // 导出运行时生成的代理对象
         System.setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
-        log.info("sss");
+//        log.info("sss");
         // HelloAnnotation 为jdk生成的动态代理对象
         HelloAnnotation annotation = TestMain.class.getAnnotation(HelloAnnotation.class);//获取TestMain上的注解对象
         System.out.println(annotation.say());

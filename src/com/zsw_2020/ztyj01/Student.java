@@ -1,6 +1,6 @@
 package com.zsw_2020.ztyj01;
 
-public class Student {
+public class Student implements Comparable{
     String name;
     int no;
     double score;
@@ -26,5 +26,10 @@ public class Student {
                 "name='" + name + '\'' +
                 ", score=" + score +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
