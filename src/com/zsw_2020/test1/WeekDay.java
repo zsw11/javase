@@ -5,9 +5,20 @@ import java.util.Arrays;
 /**
  * 枚举
  */
-public enum WeekDay{
-    SUNDAY,MONDAY,TUESDAY,
-    WESDAY,FRIDAY,STARTADAY;
+public enum WeekDay {
+    SUNDAY("s"), MONDAY("s"), TUESDAY("s"),
+    WESDAY("s"), FRIDAY("s"), STARTADAY("s"),
+    ;
+    private String string;
+
+
+    WeekDay(String string) {
+        this.string = string;
+    }
+
+    public String getValue() {
+        return string;
+    }
 
 }
 class EnumDemo{
@@ -16,6 +27,7 @@ class EnumDemo{
         System.out.println(Arrays.toString(days));
         String s= "SUNDAY";
         System.out.println(WeekDay.valueOf(s).ordinal());
+        System.out.println(WeekDay.FRIDAY.getValue()==WeekDay.FRIDAY.getValue());
     }
 
 }

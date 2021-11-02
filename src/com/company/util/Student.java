@@ -14,6 +14,17 @@ public class Student {
     // studnet 特有的
     private String card;
 
+    public Student() {
+    }
+
+    public Student(String name, Integer age, String sex, Integer id, String card) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.id = id;
+        this.card = card;
+    }
+
     public String getCard() {
         return card;
     }

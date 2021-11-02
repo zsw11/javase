@@ -5,6 +5,7 @@ import org.springframework.beans.BeansException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,7 +17,8 @@ import java.util.stream.Collectors;
 public class demo01 {
     public static void main(String[] args) {
 //        beanTest();
-        test();
+//        test();
+        test2();
 
     }
     public static void beanTest() throws BeansException {
@@ -43,5 +45,14 @@ public class demo01 {
         List<Integer> finalValidIds = validIds;
         validIds = existedIds.stream().filter(a -> !finalValidIds.contains(a)).collect(Collectors.toList());
         System.out.println(validIds);
+    }
+
+    public static void test2() {
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student("zsw", 22, "a", 12, "id"));
+        students.add(new Student("zsw", 23, "a", 12, "id"));
+        students.add(new Student("zsw", 24, "a", 12, "id"));
+        Student refundInfo = students.stream().max(Comparator.comparing(Student::getAge)).get();
+        System.out.println(refundInfo);
     }
 }
