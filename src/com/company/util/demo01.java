@@ -17,8 +17,8 @@ import java.util.stream.Collectors;
 public class demo01 {
     public static void main(String[] args) {
 //        beanTest();
-//        test();
-        test2();
+        test();
+//        test2();
 
     }
     public static void beanTest() throws BeansException {
@@ -39,7 +39,9 @@ public class demo01 {
 
     public static void test() {
         String s = "erre,wwww";
+        System.out.println(s.substring(0, s.indexOf(",")));
         String s1 = s.substring(s.substring(0, s.indexOf(",")).length()+1);
+        System.out.println(s1);
         List<Integer> existedIds = Arrays.asList(1, 2, 3);
         List<Integer> validIds = Arrays.asList(1, 2, 3,4,5);
         List<Integer> finalValidIds = validIds;
