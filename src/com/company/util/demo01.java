@@ -1,5 +1,7 @@
 package com.company.util;
 
+import jdk.nashorn.internal.runtime.logging.Logger;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 
@@ -14,11 +16,12 @@ import java.util.stream.Collectors;
  * @date 2021/1/7 10:53
  * @description
  */
+@Slf4j
 public class demo01 {
     public static void main(String[] args) {
 //        beanTest();
-        test();
-//        test2();
+//        test();
+        test2();
 
     }
     public static void beanTest() throws BeansException {
@@ -50,11 +53,18 @@ public class demo01 {
     }
 
     public static void test2() {
-        ArrayList<Student> students = new ArrayList<>();
-        students.add(new Student("zsw", 22, "a", 12, "id"));
-        students.add(new Student("zsw", 23, "a", 12, "id"));
-        students.add(new Student("zsw", 24, "a", 12, "id"));
-        Student refundInfo = students.stream().max(Comparator.comparing(Student::getAge)).get();
-        System.out.println(refundInfo);
+//        ArrayList<Student> students = new ArrayList<>();
+//        students.add(new Student("zsw", 22, "a", 12, "id"));
+//        students.add(new Student("zsw", 23, "a", 12, "id"));
+//        students.add(new Student("zsw", 24, "a", 12, "id"));
+//        Student refundInfo = students.stream().max(Comparator.comparing(Student::getAge)).get();
+//        System.out.println(refundInfo);
+        Student student = new Student();
+        if (student.getAge() !=0 && student.getAge() != null) {
+            log.info("1");
+            return;
+        }
+        log.info(student.getName());
+
     }
 }
