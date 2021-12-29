@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -19,9 +22,9 @@ import java.util.stream.Collectors;
 @Slf4j
 public class demo01 {
     public static void main(String[] args) {
-//        beanTest();
+        beanTest();
 //        test();
-        test2();
+//        test2();
 
     }
     public static void beanTest() throws BeansException {
@@ -33,6 +36,7 @@ public class demo01 {
         student.setCard("card");
 
         StudentVo studentVo = new StudentVo();
+//        studentVo.setName("ztyj");
         BeanUtils.copyProperties(student, studentVo);
 //        studentVo.setNum(new teacher("我是老师"));
 //        studentVo.setName("ztyj");
