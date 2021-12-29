@@ -1,5 +1,8 @@
 package com.company.util;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.parser.Feature;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -8,6 +11,8 @@ import java.util.Map;
 
 public class TestFiled {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
+        String data = "{\"date\": \"2022-02-05\"}";
+        User user = JSON.parseObject(data, User.class, new Feature[]{Feature.AllowISO8601DateFormat});
         test();
     }
    static Map<String,Object> map = new HashMap<String,Object>();

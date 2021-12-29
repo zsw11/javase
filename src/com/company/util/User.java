@@ -5,6 +5,11 @@ public class User {
     private String name;
     private String sex;
     private String address;
+    private String date;
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public int getId() {
         return id;
@@ -45,6 +50,11 @@ public class User {
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", address='" + address + '\'' +
+                ", date='" + date + '\'' +
                 '}';
+    }
+
+    public String getDate() {
+        return date;
     }
 }
